@@ -38,6 +38,17 @@ gem "pry"
 gem 'pry-rails'
 
 
+gem 'rspec-rails'
+
+gem 'factory_bot_rails'
+
+
+gem 'faker'
+
+
+gem 'database_cleaner-active_record'
+
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
