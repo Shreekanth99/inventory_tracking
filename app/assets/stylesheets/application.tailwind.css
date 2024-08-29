@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+
+.table-container {
+  overflow-x: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(138, 26, 26, 0.747);
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table thead {
+  background-color: #3c3d42;
+  color: #ffffff;
+}
+
+.inventory-table th, .inventory-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.inventory-table th {
+  font-weight: 600;
+}
+
+.inventory-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.inventory-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Styles for Inventory Item Table Row */
+.inventory-item-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.inventory-item-cell {
+  padding: 12px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 80px;
+  font-size: 14px;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: #0056b3;
+}
+
+.update-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .inventory-table th, .inventory-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .inventory-table th, .inventory-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    text-align: right;
+  }
+
+  .inventory-table th {
+    background: #007bff;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .inventory-table td {
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .inventory-table tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Container for the inventory item */
+.inventory-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for details */
+.inventory-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between items */
+  margin-bottom: 16px;
+}
+
+/* Styling for each detail item */
+.detail-item {
+  flex: 1 1 calc(33.333% - 16px); /* Adjust width as needed */
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.detail-item strong {
+  margin-right: 8px;
+  color: #333;
+}
+
+.item-name, .item-quantity, .item-location {
+  font-weight: normal;
+  color: #555;
+}
+
+/* Styles for form */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between input and button */
+}
+
+.form-label {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-control {
+  flex: 1; /* Allow input to take available space */
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-primary:active {
+  background-color: #004085;
+  border-color: #00376b;
+}

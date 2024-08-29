@@ -1,0 +1,4 @@
+<%= turbo_stream.replace "inventory_item_<%= @inventory_item.id %>" do %>
+    <%= render partial: "inventory_items/view_inventory_item", locals: { inventory_item: @inventory_item } %>
+  <% end %>
+  

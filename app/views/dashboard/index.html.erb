@@ -1,0 +1,27 @@
+<h1>Inventories</h1>
+<div class="table-container">
+  <table class="inventory-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @inventory_items.each_with_index do |item, index| %>
+        <tr class="inventory-item-row">
+          <td class="inventory-item-cell"><%= index + 1 %></td>
+          <td class="inventory-item-cell"><%= item.name %></td>
+          <td class="inventory-item-cell" id="quantity_<%= item.id %>"><%= item.quantity %></td>
+          <td class="inventory-item-cell"><%= item.location %></td>
+          <td class="inventory-item-cell">
+            <%= link_to 'View', view_inventory_item_path(item), class: 'action-button edit-button' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

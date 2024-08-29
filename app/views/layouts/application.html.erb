@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InventoryTracker</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4; /* Light grey background */
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #00ff43a8; /* Light green background */
+      color: #2c2c2c; /* Light dark color for the text */
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff; /* White background for content */
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #324253; /* Blue background for the sidebar */
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>Inventory Real-Time Tracker</header>
+    <div class="container">
+      <div class="sidebar">
+      <a href="<%= root_path %>">Inventory Dashboard</a>
+      </div>
+      <div class="main-content">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+  <%= javascript_importmap_tags %>
+</body>
+</html>

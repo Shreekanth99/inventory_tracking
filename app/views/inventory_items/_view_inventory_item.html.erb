@@ -1,0 +1,26 @@
+<div class="inventory-item" id="inventory_item_<%= inventory_item.id %>" data-id="<%= inventory_item.id %>">
+  <div class="inventory-details">
+    <div class="detail-item">
+      <strong>Item Name:</strong>
+      <span class="item-name"><%= inventory_item.name %></span>
+    </div>
+    <div class="detail-item">
+      <strong>Quantity:</strong>
+      <span class="item-quantity" id="quantity_<%= inventory_item.id %>"><%= inventory_item.quantity %></span>
+    </div>
+    <div class="detail-item">
+      <strong>Location:</strong>
+      <span class="item-location"><%= inventory_item.location %></span>
+    </div>
+  </div>
+
+  <%= form_with model: inventory_item, method: :patch, url: update_inventory_item_path(inventory_item), local: true, data: { turbo_frame: "inventory_item_#{inventory_item.id}" } do |form| %>
+    <div class="form-group">
+      <div class="form-row">
+        <%= form.label :quantity, "Update Quantity", class: "form-label" %>
+        <%= form.number_field :quantity, class: "form-control", step: 1 %>
+        <%= form.submit "Update", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

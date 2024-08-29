@@ -1,0 +1,3 @@
+<%= turbo_stream.update "quantity_#{params[:id]}" do %>
+  <%= render partial: "inventory_items/inventory_item", locals: { inventory_item: @inventory_item } %>
+<% end %>
